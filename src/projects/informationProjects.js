@@ -5,6 +5,7 @@ import tecboard from "./tecboard.png";
 const informationProject = [
   {
     id: 1,
+    alt: "Imagem de um projeto de e-commerce",
     image: ecommerce,
     title: "Product View",
     description: "Projeto de listagem de produtos de uma api",
@@ -14,6 +15,7 @@ const informationProject = [
   },
   {
     id: 2,
+    alt: "Imagem de uma tela de login",
     image: autenticator,
     title: "Auth Flow",
     description: "Projeto de fluxo de autenticação",
@@ -23,6 +25,7 @@ const informationProject = [
   },
   {
     id: 3,
+    alt: "Imagem do projeto tecboard",
     image: tecboard,
     title: "Tecboard",
     description: "Cadastro de enventos de tech",

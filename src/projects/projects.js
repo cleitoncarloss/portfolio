@@ -18,9 +18,9 @@ class Projects extends HTMLElement {
       <section class="projects">
         <h2 class="projects__title">Projetos</h2>
         <div class="projects__grid">
-          ${informationProject.map(({ id, image, title, description, stacks, url, details }) => `
+          ${informationProject.map(({ id, image, alt, title, description, stacks, url, details }) => `
             <article class="project-card">
-              <img src="${image}" alt="${title}" loading="eager" class="project-card__image" />
+              <img src="${image}" alt="${alt}" loading="eager" class="project-card__image" />
               <div class="project-card__content">
                 <h3 class="project-card__title">${title}</h3>
                 <p class="project-card__description">${description}</p>
