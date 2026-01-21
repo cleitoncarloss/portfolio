@@ -15,7 +15,6 @@ export default [
     rules: {
       "no-unused-vars": "warn",
       "no-console": "warn",
-      "semi": ["error", "always"],
       "quotes": ["error", "double"],
       "indent": ["error", 2, { "ignoredNodes": ["TemplateLiteral *"] }],
       "max-depth": ["warn", 1],
