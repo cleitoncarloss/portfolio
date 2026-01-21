@@ -47,7 +47,7 @@ class Contact extends HTMLElement {
               href="https://github.com/cleitoncarloss"
               class="contact__social-link"
               target="_blank"
-              title="Ver meus projetos e repositórios no GihHub"
+              title="Ver meus projetos e repositórios no GitHub"
               rel="noopener"
               aria-label="GitHub"
             >
