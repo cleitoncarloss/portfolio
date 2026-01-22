@@ -20,7 +20,7 @@ class Projects extends HTMLElement {
         <div class="projects__grid">
           ${informationProject.map(({ id, image, alt, title, description, stacks, url, details }) => `
             <article class="project-card">
-              <img src="${image}" alt="${alt}" loading="eager" class="project-card__image" />
+              <img src="${image}" alt="${alt}" loading="eager" fetchpriority="high" class="project-card__image" />
               <div class="project-card__content">
                 <h3 class="project-card__title">${title}</h3>
                 <p class="project-card__description">${description}</p>
