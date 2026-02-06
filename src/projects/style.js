@@ -43,6 +43,19 @@ style.replaceSync(`
     overflow: hidden;
   }
 
+  .project-card__iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    pointer-events: none;
+  }
+
+  .project-card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
   .project-card__content {
     padding: 1.5rem;
     display: flex;
