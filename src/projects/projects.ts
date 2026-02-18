@@ -1,11 +1,13 @@
 import { style } from "./style.js";
 import informationProject from "./informationProjects.js"
+import define from "@directive/define";
 
+@define("c-projects")
 class Projects extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-    this.shadowRoot.adoptedStyleSheets = [style];
+    this.shadowRoot!.adoptedStyleSheets = [style];
   }
 
   connectedCallback() {
@@ -14,7 +16,7 @@ class Projects extends HTMLElement {
   }
 
   render() {
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot!.innerHTML = `
       <section class="projects">
         <h2 class="projects__title">Projetos</h2>
         <div class="projects__grid">
@@ -56,12 +58,13 @@ class Projects extends HTMLElement {
   }
 
   popover() {
-    const popovers = this.shadowRoot.querySelectorAll("[popover]");
+    const popovers = this.shadowRoot!.querySelectorAll("[popover]");
 
     popovers.forEach((popover) => {
-      popover.addEventListener("toggle", (event) => {
-        document.body.style.overflow = event.newState === "open" ? "hidden" : "";
-        this.classList.toggle("popover-open", event.newState === "open");
+      popover.addEventListener("toggle", (event: Event) => {
+        const toggleEvent = event as ToggleEvent;
+        document.body.style.overflow = toggleEvent.newState === "open" ? "hidden" : "";
+        this.classList.toggle("popover-open", toggleEvent.newState === "open");
       });
     });
   }

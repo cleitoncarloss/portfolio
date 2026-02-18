@@ -1,11 +1,13 @@
 import { style } from "./style.js";
 import icon from "./icon";
+import define from "@directive/define";
 
+@define("c-contact")
 class Contact extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-    this.shadowRoot.adoptedStyleSheets = [style];
+    this.shadowRoot!.adoptedStyleSheets = [style];
   }
 
   connectedCallback() {
@@ -13,7 +15,7 @@ class Contact extends HTMLElement {
   }
 
   render() {
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot!.innerHTML = `
       <section class="contact">
         <div class="contact__container">
           <h2 class="contact__title">Contato</h2>

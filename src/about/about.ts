@@ -1,15 +1,17 @@
 import { style } from "./style.js";
 import skills from "./skills.js";
+import define from "@directive/define";
 
+@define("c-about")
 class About extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-    this.shadowRoot.adoptedStyleSheets = [style];
+    this.shadowRoot!.adoptedStyleSheets = [style];
   }
 
   connectedCallback() {
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot!.innerHTML = `
       <section class="about">
         <div class="about__container">
           <h2 class="about__title">Sobre Mim</h2>

@@ -1,15 +1,17 @@
 import { style } from "./style.js";
 import cleiton from "./cleiton-profile.png";
+import define from "@directive/define";
 
+@define("c-header")
 class Header extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-    this.shadowRoot.adoptedStyleSheets = [style];
+    this.shadowRoot!.adoptedStyleSheets = [style];
   }
 
   connectedCallback() {
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot!.innerHTML = `
       <header class="header">
         <figure class="header__profile">
           <img
