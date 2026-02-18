@@ -84,7 +84,7 @@ style.replaceSync(`
 
   .project-card__tag {
     font-size: 0.75rem;
-    color: #e94560;
+    color: #FF5C77;
     background-color: rgba(233, 69, 96, 0.1);
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
