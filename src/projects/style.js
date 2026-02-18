@@ -99,14 +99,14 @@ style.replaceSync(`
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
     color: #ffffff;
-    background-color: #D93C5B;
+    background-color: #D12F50;
     border-radius: 6px;
     text-decoration: none;
     transition: background-color 0.3s ease;
   }
 
   .project-card__link:hover {
-    background-color: #d63850;
+    background-color: #B82846;
   }
 
   .project-card__link-icon {
@@ -134,7 +134,7 @@ style.replaceSync(`
   }
 
   .project-card__details-btn:hover {
-    background-color: #e94560;
+    background-color: #FF5C77;
     color: #ffffff;
   }
 
