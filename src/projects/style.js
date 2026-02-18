@@ -99,7 +99,7 @@ style.replaceSync(`
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
     color: #ffffff;
-    background-color: #e94560;
+    background-color: #D93C5B;
     border-radius: 6px;
     text-decoration: none;
     transition: background-color 0.3s ease;
@@ -125,9 +125,9 @@ style.replaceSync(`
     flex: 1;
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
-    color: #e94560;
+    color: #FF5C77;
     background-color: transparent;
-    border: 1px solid #e94560;
+    border: 1px solid #FF5C77;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
