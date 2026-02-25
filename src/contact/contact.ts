@@ -11,10 +11,6 @@ class Contact extends HTMLElement {
   }
 
   connectedCallback() {
-    this.render();
-  }
-
-  render() {
     this.shadowRoot!.innerHTML = `
       <section class="contact">
         <div class="contact__container">
