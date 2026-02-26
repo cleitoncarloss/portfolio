@@ -1,31 +1,47 @@
 import { style } from "./style.js";
 import icon from "./icon";
+import translate from "./translate.js";
 import define from "@directive/define";
 
 @define("c-contact")
 class Contact extends HTMLElement {
+  #lang = "portuguese";
+
+  static observedAttributes = ["language"];
+
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot!.adoptedStyleSheets = [style];
+    document.addEventListener("languageSelected", (e) => {
+      this.setAttribute("language", (e as CustomEvent).detail.language);
+    });
   }
 
   connectedCallback() {
+    this.render();
+  }
+
+  attributeChangedCallback() {
+    this.#lang = this.getAttribute("language") ?? "portuguese";
+    this.render();
+  }
+
+  render() {
+    const t = translate[this.#lang as keyof typeof translate];
     this.shadowRoot!.innerHTML = `
       <section class="contact">
         <div class="contact__container">
-          <h2 class="contact__title">Contato</h2>
+          <h2 class="contact__title">${t.title}</h2>
           <p class="contact__text">
-            Vamos trabalhar juntos? Entre em contato comigo através das redes
-            sociais abaixo. Estou sempre aberto a novas oportunidades e projetos
-            interessantes.
+            ${t.text}
           </p>
           <nav class="contact__social">
             <a
               href="https://wa.me/5519989174429"
               class="contact__social-link"
               target="_blank"
-              title="Entrar em contato comigo via WhatsApp"
+              title="${t.whatsappTitle}"
               rel="noopener"
               aria-label="WhatsApp"
             >
@@ -35,7 +51,7 @@ class Contact extends HTMLElement {
               href="https://www.linkedin.com/in/cleiton-carlos/"
               class="contact__social-link"
               target="_blank"
-              title="Acessar meu perfil profissional no LinkedIn"
+              title="${t.linkedinTitle}"
               rel="noopener"
               aria-label="LinkedIn"
             >
@@ -45,7 +61,7 @@ class Contact extends HTMLElement {
               href="https://github.com/cleitoncarloss"
               class="contact__social-link"
               target="_blank"
-              title="Ver meus projetos e repositórios no GitHub"
+              title="${t.githubTitle}"
               rel="noopener"
               aria-label="GitHub"
             >

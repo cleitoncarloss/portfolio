@@ -1,0 +1,130 @@
+const translate = {
+  portuguese: {
+    title: "Projetos",
+    detailsBtn: "Detalhes do projeto",
+    closeBtn: "Fechar",
+    projects: [
+      {
+        id: 1,
+        alt: "Assistentes que geram suas próprias interfaces",
+        description: "Morph, a internet que conversa com você",
+        text: "Projeto em desenvolvimento",
+        details: "O MORPH é um projeto que propõe uma nova forma de interação com a internet, A proposta do projeto é permitir que o usuário expresse sua intenção diretamente, por meio de texto ou voz, e que o sistema interprete essa intenção para gerar dinamicamente a interface e a experiência necessária naquele contexto. Ou seja, a interação deixa de ser baseada em cliques e passa a ser baseada em conversação.",
+      },
+      {
+        id: 2,
+        alt: "Aprenda 5x mais Rápido! | Memoize",
+        description: "Aplicativo avançado de flashcards",
+        text: "Ver projeto",
+        details: "Memoize, um aplicativo avançado de flashcards projetado para otimizar o processo de aprendizado e memorização. A plataforma oferece aos estudantes, profissionais em constante aprendizado e educadores uma abordagem inovadora e personalizada para aprimorar suas habilidades de estudo e retenção de informações essenciais",
+      },
+      {
+        id: 3,
+        alt: "Imagem de um projeto de e-commerce",
+        description: "Projeto de listagem de produtos de uma api",
+        text: "Ver projeto",
+        details: "Projeto feito usando a biblioteca de WebComponents chamado @nodusjs focado em dataflow, nele eu faço requisição de uma api de produtos e exibo na tela algumas informações como nome e preço usando apenas HTML.",
+      },
+      {
+        id: 4,
+        alt: "Imagem de uma tela de login",
+        description: "Projeto de fluxo de autenticação",
+        text: "Ver projeto",
+        details: "Projeto de fluxo de autenticação desenvolvido em React, utilizando Supabase como backend-as-a-service para autenticação e Tailwind CSS para estilização. A aplicação implementa telas de login, criação de conta, recuperação de senha e verificação de código, com foco em componentização e gerenciamento de estado",
+      },
+      {
+        id: 5,
+        alt: "Imagem do projeto tecboard",
+        description: "Cadastro de enventos de tech",
+        text: "Ver projeto",
+        details: "Projeto desenvolvido em React utilizando JSX, componentização e useState para gerenciamento de estado. A aplicação consiste em um formulário de cadastro de eventos de tecnologia, permitindo ao usuário informar nome do evento, imagem, data e categoria onde os dados são capturados via form action com FormData.",
+      },
+    ],
+  },
+  english: {
+    title: "Projects",
+    detailsBtn: "Project Details",
+    closeBtn: "Close",
+    projects: [
+      {
+        id: 1,
+        alt: "Assistants that generate their own interfaces",
+        description: "Morph, the internet that talks to you",
+        text: "Project in development",
+        details: "MORPH is a project that proposes a new way of interacting with the internet. The proposal is to allow users to express their intention directly through text or voice, and the system interprets that intention to dynamically generate the interface and experience needed in that context. In other words, interaction shifts from being click-based to conversation-based.",
+      },
+      {
+        id: 2,
+        alt: "Learn 5x faster! | Memoize",
+        description: "Advanced flashcard application",
+        text: "View project",
+        details: "Memoize, an advanced flashcard application designed to optimize the learning and memorization process. The platform offers students, professionals in constant learning, and educators an innovative and personalized approach to improving their study skills and retention of essential information.",
+      },
+      {
+        id: 3,
+        alt: "Image of an e-commerce project",
+        description: "Product listing project from an api",
+        text: "View project",
+        details: "Project made using the WebComponents library called @nodusjs focused on dataflow, where I make a request from a products api and display some information like name and price on the screen using just HTML.",
+      },
+      {
+        id: 4,
+        alt: "Image of a login screen",
+        description: "Authentication flow project",
+        text: "View project",
+        details: "Authentication flow project developed in React, using Supabase as a backend-as-a-service for authentication and Tailwind CSS for styling. The application implements login screens, account creation, password recovery and code verification, focusing on componentization and state management.",
+      },
+      {
+        id: 5,
+        alt: "Image of the tecboard project",
+        description: "Tech events registration",
+        text: "View project",
+        details: "Project developed in React using JSX, componentization and useState for state management. The application consists of a form for registering technology events, allowing the user to enter the event name, image, date and category where data is captured via form action with FormData.",
+      },
+    ],
+  },
+  espanhol: {
+    title: "Proyectos",
+    detailsBtn: "Detalles del Proyecto",
+    closeBtn: "Cerrar",
+    projects: [
+      {
+        id: 1,
+        alt: "Asistentes que generan sus propias interfaces",
+        description: "Morph, el internet que habla contigo",
+        text: "Proyecto en desarrollo",
+        details: "MORPH es un proyecto que propone una nueva forma de interactuar con internet. La propuesta es permitir que los usuarios expresen su intención directamente a través de texto o voz, e interpretar esa intención para generar dinámicamente la interfaz y la experiencia necesaria en ese contexto. Es decir, la interacción pasa de ser basada en clics a basada en conversación.",
+      },
+      {
+        id: 2,
+        alt: "¡Aprende 5 veces más rápido! | Memoize",
+        description: "Aplicación avanzada de tarjetas de memoria",
+        text: "Ver proyecto",
+        details: "Memoize, una aplicación avanzada de tarjetas de memoria diseñada para optimizar el proceso de aprendizaje y memorización. La plataforma ofrece a estudiantes, profesionales en aprendizaje constante y educadores un enfoque innovador y personalizado para mejorar sus habilidades de estudio y retención de información esencial.",
+      },
+      {
+        id: 3,
+        alt: "Imagen de un proyecto de comercio electrónico",
+        description: "Proyecto de listado de productos de una api",
+        text: "Ver proyecto",
+        details: "Proyecto realizado utilizando la biblioteca de WebComponents llamada @nodusjs enfocada en flujo de datos, donde hago una solicitud de una api de productos y muestro en pantalla información como nombre y precio utilizando solo HTML.",
+      },
+      {
+        id: 4,
+        alt: "Imagen de una pantalla de inicio de sesión",
+        description: "Proyecto de flujo de autenticación",
+        text: "Ver proyecto",
+        details: "Proyecto de flujo de autenticación desarrollado en React, utilizando Supabase como servicio backend para autenticación y Tailwind CSS para estilos. La aplicación implementa pantallas de inicio de sesión, creación de cuenta, recuperación de contraseña y verificación de código, enfocándose en componentización y gestión de estado.",
+      },
+      {
+        id: 5,
+        alt: "Imagen del proyecto tecboard",
+        description: "Registro de eventos tecnológicos",
+        text: "Ver proyecto",
+        details: "Proyecto desarrollado en React utilizando JSX, componentización y useState para la gestión de estado. La aplicación consta de un formulario para registrar eventos tecnológicos, permitiendo al usuario ingresar el nombre del evento, imagen, fecha y categoría donde los datos se capturan a través de la acción del formulario con FormData.",
+      },
+    ],
+  },
+};
+
+export default translate;
