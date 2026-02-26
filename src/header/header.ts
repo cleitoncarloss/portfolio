@@ -37,7 +37,7 @@ class Header extends HTMLElement {
             <p class="header__description">${t.description}</p>
           </section>
         </div>
-        <select class="header__language">
+        <select class="header__language" aria-label="Selecionar indioma">
           <option value="portuguese" ${this.#lang === "portuguese" ? "selected" : ""}>🇧🇷 PT</option>
           <option value="english" ${this.#lang === "english" ? "selected" : ""}>🇺🇸 EN</option>
           <option value="espanhol" ${this.#lang === "espanhol" ? "selected" : ""}>🇪🇸 ES</option>
