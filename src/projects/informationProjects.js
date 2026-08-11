@@ -1,36 +1,10 @@
 import autenticator from "./autenticator.png";
 import ecommerce from "./ecommerce.png";
 import tecboard from "./tecboard.png";
-import morph from "./morph.png";
-import memoize from "./memoize.png";
 
 const informationProject = [
   {
     id: 1,
-    alt: "Assistentes que geram suas próprias interfaces",
-    image: morph,
-    title: "Morph",
-    description: "Morph, a internet que conversa com você",
-    stacks: ["IA", "HTML", "CSS", "JAVASCRIPT", "TYPESCRIPT", "WEBCOMPONENTS"],
-    url: "#",
-    text: "Projeto em desenvolvimento",
-    redirect: "",
-    details: "O MORPH é um projeto que propõe uma nova forma de interação com a internet, A proposta do projeto é permitir que o usuário expresse sua intenção diretamente, por meio de texto ou voz, e que o sistema interprete essa intenção para gerar dinamicamente a interface e a experiência necessária naquele contexto. Ou seja, a interação deixa de ser baseada em cliques e passa a ser baseada em conversação."
-  },
-  {
-    id: 2,
-    alt: "Aprenda 5x mais Rápido! | Memoize",
-    image: memoize,
-    title: "Memoize",
-    description: "Aplicativo avançado de flashcards",
-    stacks: ["HTML", "CSS", "JAVASCRIPT", "TYPESCRIPT"],
-    text: "Ver projeto",
-    url: "https://memoize.cards/",
-    redirect: "_blank",
-    details: "Memoize, um aplicativo avançado de flashcards projetado para otimizar o processo de aprendizado e memorização. A plataforma oferece aos estudantes, profissionais em constante aprendizado e educadores uma abordagem inovadora e personalizada para aprimorar suas habilidades de estudo e retenção de informações essenciais"
-  },
-  {
-    id: 3,
     alt: "Imagem de um projeto de e-commerce",
     image: ecommerce,
     title: "Product View",
@@ -42,7 +16,7 @@ const informationProject = [
     details: "Projeto feito usando a biblioteca de WebComponents chamado @nodusjs focado em dataflow, nele eu faço requisição de uma api de produtos e exibo na tela algumas informações como nome e preço usando apenas HTML."
   },
   {
-    id: 4,
+    id: 2,
     alt: "Imagem de uma tela de login",
     image: autenticator,
     title: "Auth Flow",
@@ -54,7 +28,7 @@ const informationProject = [
     details: "Projeto de fluxo de autenticação desenvolvido em React, utilizando Supabase como backend-as-a-service para autenticação e Tailwind CSS para estilização. A aplicação implementa telas de login, criação de conta, recuperação de senha e verificação de código, com foco em componentização e gerenciamento de estado"
   },
   {
-    id: 5,
+    id: 3,
     alt: "Imagem do projeto tecboard",
     image: tecboard,
     title: "Tecboard",

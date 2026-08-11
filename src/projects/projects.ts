@@ -35,22 +35,21 @@ class Projects extends HTMLElement {
       <section class="projects">
         <h2 class="projects__title">${t.title}</h2>
         <div class="projects__grid">
-          ${informationProject.map(({ id, image, title, stacks, url, redirect }) => {
-            const project = projects.find((p: { id: number }) => p.id === id);
+          ${informationProject.map(({ id, image, title, details, text, description, alt, stacks, url, redirect }) => {
             return `
             <article class="project-card">
-              <img src="${image}" alt="${project?.alt}" loading="eager" fetchpriority="high" class="project-card__image" />
+              <img src="${image}" alt="${alt}" loading="eager" fetchpriority="high" class="project-card__image" />
               <div class="project-card__content">
                 <h3 class="project-card__title">${title}</h3>
-                <p class="project-card__description">${project?.description}</p>
+                <p class="project-card__description">${description}</p>
                 <div class="project-card__tags">
                   ${stacks.map((stack: string) => `
                     <span class="project-card__tag">${stack}</span>`
                   ).join("")}
                 </div>
                 <div class="project-card__actions">
-                  <a href=${url} title="${project?.text}" class="project-card__link" target="${redirect}" rel="noopener">
-                    ${project?.text}
+                  <a href=${url} title="${text}" class="project-card__link" target="${redirect}" rel="noopener">
+                    ${text}
                     <svg class="project-card__link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
                     </svg>
@@ -61,7 +60,7 @@ class Projects extends HTMLElement {
                 </div>
                 <div id="popover-${id}" popover class="project-popover">
                   <h3 class="project-popover__title">${title}</h3>
-                  <p class="project-popover__text">${project?.details}</p>
+                  <p class="project-popover__text">${details}</p>
                   <button class="project-popover__close" popovertarget="popover-${id}" popovertargetaction="hide">
                     ${t.closeBtn}
                   </button>
