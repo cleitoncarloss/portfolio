@@ -90,30 +90,6 @@ style.replaceSync(`
     border-radius: 20px;
   }
 
-  .project-card__link {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    color: #ffffff;
-    background-color: #D12F50;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-
-  .project-card__link:hover {
-    background-color: #B82846;
-  }
-
-  .project-card__link-icon {
-    width: 16px;
-    height: 16px;
-  }
-
   .project-card__actions {
     display: flex;
     flex-direction: column;
@@ -125,17 +101,16 @@ style.replaceSync(`
     flex: 1;
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
-    color: #FF5C77;
-    background-color: transparent;
-    border: 1px solid #FF5C77;
+    color: #ffffff;
+    background-color: #D12F50;
+    border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
   }
 
   .project-card__details-btn:hover {
-    background-color: #FF5C77;
-    color: #ffffff;
+    background-color: #B82846;
   }
 
   .project-popover {

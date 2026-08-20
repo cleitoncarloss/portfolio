@@ -1,44 +1,13 @@
-import autenticator from "./autenticator.png";
-import ecommerce from "./ecommerce.png";
-import tecboard from "./tecboard.png";
+import siteDulino from "./sistema-dulino.png";
+import appDulino from "./appDulino.png";
+import n8n from "./n8n.png";
+import sgi from "./sgi.png";
 
 const informationProject = [
-  {
-    id: 1,
-    alt: "Imagem de um projeto de e-commerce",
-    image: ecommerce,
-    title: "Product View",
-    description: "Projeto de listagem de produtos de uma api",
-    stacks: ["HTML"],
-    text: "Ver projeto",
-    url: "https://productview.pages.dev/",
-    redirect: "_blank",
-    details: "Projeto feito usando a biblioteca de WebComponents chamado @nodusjs focado em dataflow, nele eu faço requisição de uma api de produtos e exibo na tela algumas informações como nome e preço usando apenas HTML."
-  },
-  {
-    id: 2,
-    alt: "Imagem de uma tela de login",
-    image: autenticator,
-    title: "Auth Flow",
-    description: "Projeto de fluxo de autenticação",
-    stacks: ["REACT", "TAILWIND", "SUPABASE"],
-    text: "Ver projeto",
-    url: "https://autenticator.netlify.app/auth/sign-in",
-    redirect: "_blank",
-    details: "Projeto de fluxo de autenticação desenvolvido em React, utilizando Supabase como backend-as-a-service para autenticação e Tailwind CSS para estilização. A aplicação implementa telas de login, criação de conta, recuperação de senha e verificação de código, com foco em componentização e gerenciamento de estado"
-  },
-  {
-    id: 3,
-    alt: "Imagem do projeto tecboard",
-    image: tecboard,
-    title: "Tecboard",
-    description: "Cadastro de enventos de tech",
-    stacks: ["REACT"],
-    text: "Ver projeto",
-    url: "https://tecboardd.netlify.app/",
-    redirect: "_blank",
-    details: "Projeto desenvolvido em React utilizando JSX, componentização e useState para gerenciamento de estado. A aplicação consiste em um formulário de cadastro de eventos de tecnologia, permitindo ao usuário informar nome do evento, imagem, data e categoria onde os dados são capturados via form action com FormData."
-  }
-] 
+  { id: 1, image: siteDulino },
+  { id: 2, image: appDulino },
+  { id: 3, image: n8n },
+  { id: 4, image: sgi },
+];
 
 export default informationProject;

@@ -30,30 +30,19 @@ class Projects extends HTMLElement {
 
   render() {
     const t = translate[this.#lang as keyof typeof translate];
-    const projects = t.projects;
     this.shadowRoot!.innerHTML = `
       <section class="projects">
         <h2 class="projects__title">${t.title}</h2>
         <div class="projects__grid">
-          ${informationProject.map(({ id, image, title, details, text, description, alt, stacks, url, redirect }) => {
+          ${t.projects.map(({ id, title, details, description, alt }) => {
+            const { image } = informationProject.find((project) => project.id === id)!;
             return `
             <article class="project-card">
               <img src="${image}" alt="${alt}" loading="eager" fetchpriority="high" class="project-card__image" />
               <div class="project-card__content">
                 <h3 class="project-card__title">${title}</h3>
                 <p class="project-card__description">${description}</p>
-                <div class="project-card__tags">
-                  ${stacks.map((stack: string) => `
-                    <span class="project-card__tag">${stack}</span>`
-                  ).join("")}
-                </div>
                 <div class="project-card__actions">
-                  <a href=${url} title="${text}" class="project-card__link" target="${redirect}" rel="noopener">
-                    ${text}
-                    <svg class="project-card__link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
-                    </svg>
-                  </a>
                   <button class="project-card__details-btn" popovertarget="popover-${id}">
                     ${t.detailsBtn}
                   </button>
