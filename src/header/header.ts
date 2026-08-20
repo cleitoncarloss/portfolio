@@ -21,6 +21,30 @@ class Header extends HTMLElement {
     const t = translate[this.#lang as keyof typeof translate];
     this.shadowRoot!.innerHTML = `
       <header class="header">
+        <div class="header__language" role="tablist" aria-label="Selecionar idioma">
+          <button
+            type="button"
+            role="tab"
+            class="header__language-tab"
+            data-lang="portuguese"
+            aria-selected="${this.#lang === "portuguese"}"
+          >🇧🇷 PT</button>
+          <button
+            type="button"
+            role="tab"
+            class="header__language-tab"
+            data-lang="english"
+            aria-selected="${this.#lang === "english"}"
+          >🇺🇸 EN</button>
+          <button
+            type="button"
+            role="tab"
+            class="header__language-tab"
+            data-lang="espanhol"
+            aria-selected="${this.#lang === "espanhol"}"
+          >🇪🇸 ES</button>
+        </div>
+        <hr class="header__divider" />
         <div class="header__container">
           <figure class="header__profile">
             <img
@@ -37,28 +61,25 @@ class Header extends HTMLElement {
             <p class="header__description">${t.description}</p>
           </section>
         </div>
-        <select class="header__language" aria-label="Selecionar indioma">
-          <option value="portuguese" ${this.#lang === "portuguese" ? "selected" : ""}>🇧🇷 PT</option>
-          <option value="english" ${this.#lang === "english" ? "selected" : ""}>🇺🇸 EN</option>
-          <option value="espanhol" ${this.#lang === "espanhol" ? "selected" : ""}>🇪🇸 ES</option>
-        </select>
       </header>
     `;
     this.#setupLangSwitcher();
   }
 
   #setupLangSwitcher() {
-    const select = this.shadowRoot!.querySelector(".header__language") as HTMLSelectElement;
-    select?.addEventListener("change", () => {
-      const value = select.value;
-      this.#lang = value;
-      document.dispatchEvent(
-        new CustomEvent("languageSelected", {
-          detail: { language: value },
-          bubbles: true,
-        })
-      );
-      this.render();
+    const tabs = this.shadowRoot!.querySelectorAll(".header__language-tab");
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const value = (tab as HTMLElement).dataset.lang!;
+        this.#lang = value;
+        document.dispatchEvent(
+          new CustomEvent("languageSelected", {
+            detail: { language: value },
+            bubbles: true,
+          })
+        );
+        this.render();
+      });
     });
   }
 }
